@@ -1,3 +1,81 @@
-.current {
-    color : green;
+//
+// ==========  FONTS ==========
+//
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+
+$sky_color : #3DC8FF;
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    background-color: $sky_color;
 }
+
+//
+//============ NAVIGATION BAR ================
+//
+
+$selected : #2986AA;
+$hovered : #AF4441;
+$nav_color : #F8615A;
+
+.current {
+    background-color: $selected;
+}
+
+a[name="pagelink"]{
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    margin-top: 0;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 0;
+    height : 30px;
+    width : 80px;
+    text-decoration: none;
+    text-align: center;
+    background-color: $selected;
+}
+
+a[name="pagelink"]:not(.current){
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+    height : 30px;
+    width : 80px;
+    text-decoration: none;
+    text-align: center;
+    background-color: $nav_color;
+}
+
+a[name="pagelink"]:hover{
+    background-color: $hovered;
+}
+
+
+.navigation {
+    background-color: #F8615A;
+    width: 100%;
+    height: 30px;
+
+}
+
+.navdiv {
+    float: none;
+}
+
+
+.social {
+    float: left;
+}
+
+.sitenav {
+    float: right;
+}
+
+//
+//============ Navigation Bar End =============
+//
