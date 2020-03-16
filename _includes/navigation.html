@@ -1,16 +1,23 @@
-<nav class="navigation"> 
-    <span class="logo">
+<nav class="navbar navbar-expand-lg navbar-dark navigation">
 
-    </span>
-    <span class="social">
-        &nbsp;
-    </span>
-    <span class="navdiv">  &nbsp; </span>
-    <span class="sitenav">
-        {% for item in site.data.navigation %}
-            <a name="pagelink" href={{ item.link }} {% if page.url == item.link %}class="current"{% endif %} >
+    <a class="navbar-brand" href="#">
+        <img width="30" height="30" class="logo d-inline-block align-center"
+            alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse pull-right" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            {% for item in site.data.navigation %}
+            <a {% if page.url == item.link %}class="nav-item nav-link active" {% else %} class="nav-item nav-link"
+                {% endif %} href={{ item.link }}>
                 {{item.name}}
             </a>
-        {% endfor %}
-    </span>
-  </nav>
+            {% endfor %}
+
+        </div>
+    </div>
+</nav>
