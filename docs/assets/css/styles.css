@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-body { margin: 0; overflow-x: hidden; background-color: #3A4750; }
+@import url("https://fonts.googleapis.com/css?family=Handlee&display=swap");
+body { margin: 0; overflow-x: hidden; background-color: #3A4750; color: #EEEEEE; }
+
+.nameHeader { font-family: 'Handlee', cursive; font-size: 4em; }
+
+.headerRow { height: 300px; }
 
 .current { background-color: #303841; }
 
@@ -7,16 +12,18 @@ body { margin: 0; overflow-x: hidden; background-color: #3A4750; }
 
 a[name="pagelink"] { display: table-cell; vertical-align: middle; color: #EEEEEE; margin-top: 0; font-family: 'Open Sans', sans-serif; margin-bottom: 0; height: 30px; width: 80px; text-decoration: none; text-align: center; background-color: #303841; }
 
-a[name="pagelink"]:not(.current) { display: table-cell; vertical-align: middle; color: white; margin-top: 0; margin-bottom: 0; height: 30px; width: 80px; text-decoration: none; text-align: center; background-color: #D72323; }
+.nav-link[name="page-link"] { text-align: right; color: #EEEEEE; }
 
-a[name="pagelink"]:hover { background-color: #AF4441; }
+.go_right { float: right; }
 
-.navigation { background-color: #D72323; }
+.navigation { background-color: #3A4750; }
 
 .navdiv { float: none; }
 
 .social { float: left; }
 
 .sitenav { float: right; }
+
+.projectName { font-size: 2.5rem; }
 
 /*# sourceMappingURL=styles.css.map */
