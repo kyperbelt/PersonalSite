@@ -1,0 +1,7 @@
+
+<div class="d-md-inline">Download:</div>
+{%for getlink in page.download %}
+    <div class="d-inline px-0 px-md-1 ">
+        <a class="" href="{{getlink.href}}"><img class="" src="/assets/image/links/{{getlink.name}}_big.png" width="80" height="32" alt="{{getlink.name}}"></a>
+    </div>
+{%endfor%}

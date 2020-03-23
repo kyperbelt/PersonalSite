@@ -1,7 +1,10 @@
+$enable_gradients : true;
+
 //
 // ==========  FONTS ==========
 //
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Handlee&display=swap');
 
 //
 // =========== BODY ============
@@ -20,7 +23,18 @@ body{
     margin: 0;
     overflow-x: hidden;
     background-color: $background_black;
+    color: $light_font;
 }
+
+.nameHeader{
+    font-family: 'Handlee', cursive;
+    font-size: 4em;
+}
+
+.headerRow {
+    height: 300px;
+}
+
 
 //
 //============ NAVIGATION BAR ================
@@ -54,26 +68,17 @@ a[name="pagelink"]{
     background-color: $selected;
 }
 
-a[name="pagelink"]:not(.current){
-    display: table-cell;
-    vertical-align: middle;
-    color: white;
-    margin-top: 0;
-    margin-bottom: 0;
-    height : 30px;
-    width : 80px;
-    text-decoration: none;
-    text-align: center;
-    background-color: $nav_color;
+.nav-link[name="page-link"] {
+    text-align: right;
+    color: $light_font;
 }
 
-a[name="pagelink"]:hover{
-    background-color: $hovered;
+.go_right {
+    float : right;
 }
-
 
 .navigation {
-    background-color: $heading_red;
+    background-color: $background_black
     
 
 }
@@ -94,3 +99,9 @@ a[name="pagelink"]:hover{
 //
 //============ Navigation Bar End =============
 //
+
+// =========== Projects ==================
+
+.projectName {
+    font-size: 2.5rem;
+}

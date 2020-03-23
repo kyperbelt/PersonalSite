@@ -12,6 +12,17 @@ defaults:
       path: ""
     values:
       layout: "default"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+        layout : project
+        thumb : untitled.png
+        name : untitled
+        images : []
+        download: []
+        information : []
+        description : short description
 
 plugins:
   - jekyll-feed

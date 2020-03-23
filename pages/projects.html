@@ -2,4 +2,21 @@
 title : Projects
 permalink : /projects/
 ---
-My projects
+<div class="container">
+    <div class="row">
+        <div class="projetsHeader">Projects</div>
+    </div>
+    <div class="row">
+        {% for project in site.projects %}
+        <div class="col">
+            <div class="card bg-dark" style="width: 18rem;">
+                <a href="{{project.url}}"><img src="/assets/image/projects/{{project.thumb}}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <h5 class="card-title text-center">{{project.name}}</h5>
+                </div>
+              </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
