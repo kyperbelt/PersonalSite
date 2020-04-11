@@ -3,20 +3,34 @@ title : Projects
 permalink : /projects/
 ---
 <div class="container">
-    <div class="row">
-        <div class="projetsHeader">Projects</div>
-    </div>
-    <div class="row">
-        {% for project in site.projects %}
-        <div class="col">
-            <div class="card bg-dark" style="width: 18rem;">
-                <a href="{{project.url}}"><img src="/assets/image/projects/{{project.thumb}}" class="card-img-top" alt="..."></a>
-                <div class="card-body">
-                  <h5 class="card-title text-center">{{project.name}}</h5>
-                </div>
-              </div>
-        </div>
+    <!-- <div class="row">
+        <div class="col text-center projectsHeader">Projects</div>
+    </div> -->
+    <div class="row justify-content-start">
+        {%assign categories = "" | split: ','%}
+        {% for p in site.projects %}
+            {%unless categories contains p.category %}
+                {% assign categories = categories | push: p.category %}
+            {%endunless%}
         {% endfor %}
+        {%for category in categories%}
+            <div class="col-12 mt-0 mt-sm-3 mt-md-5 text-left categoryName">
+                <a name="{{category}}">{{category | capitalize }}</a>
+            </div>
+            {%assign projects = site.projects | where : "category",category %}
+            {% for project in projects%}
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2">
+                    
+                    <a href="{{project.url}}">
+                        <div class="card bg-dark h-100"><img src="/assets/image/projects/{{project.thumb}}" class="card-img-top h-75" alt="...">
+                            <div class="card-body p-2">
+                            <div class="h5 text-light card-title text-center">{{project.title}}</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        {%endfor%}
     </div>
 
 </div>

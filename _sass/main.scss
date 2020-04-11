@@ -5,6 +5,9 @@ $enable_gradients : true;
 //
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+2&display=swap');
 
 //
 // =========== BODY ============
@@ -13,7 +16,8 @@ $enable_gradients : true;
 $heading_red : #D72323;
 $selected_black : #303841;
 $background_black : #3A4750;
-$light_font : #EEEEEE;
+$light_font : #999999;
+$even_ligher_font: #DDDDDD;
 
 $sky_color : #3DC8FF;
 
@@ -23,16 +27,30 @@ body{
     margin: 0;
     overflow-x: hidden;
     background-color: $background_black;
-    color: $light_font;
+    color: $even_ligher_font;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.nameHeader{
+.introHeader{
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 1.5rem;
+}
+
+.valueHeader{
     font-family: 'Handlee', cursive;
-    font-size: 4em;
+    font-size: 3rem;
+}
+
+.skillHeader{
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 1.5rem;
 }
 
 .headerRow {
-    height: 300px;
+    height: 12rem;
 }
 
 
@@ -78,7 +96,7 @@ a[name="pagelink"]{
 }
 
 .navigation {
-    background-color: $background_black
+    background-color: #3A4750DD;
     
 
 }
@@ -103,5 +121,107 @@ a[name="pagelink"]{
 // =========== Projects ==================
 
 .projectName {
+    font-family: 'Open Sans','sans-serif';
+    font-weight: bolder;
     font-size: 2.5rem;
 }
+
+.projectsHeader {
+    font-family: 'Bungee Inline', cursive;
+    color: $light_font;
+    font-size: 3.5rem;
+}
+
+.categoryName {
+    font-size: 2rem;
+    color: $hovered;
+    font-family: 'Bungee', sans-serif;
+}
+
+//============== FOOTER =======
+
+.footer {
+    position: relative;
+    bottom : 0px;
+    border-top : 4px dotted $selected_black;
+    height: 8rem;
+}
+
+.footerName{
+    color: $light_font;
+    font-size: .9rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footerLink{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.footerLinkImage{
+    width: 1rem;
+    margin-right: .2rem;
+}
+
+.myContent {
+    padding-bottom: 1rem;
+    flex : 1;
+}
+
+.footerCopyright{
+    font-size:.5rem;
+    color : $light_font;
+}
+
+.pgz{
+    position: absolute;
+    bottom:0px;
+    font-size: .4rem;
+}
+
+// ========== index
+
+.showRow{
+    background-color: $selected_black;
+}
+
+.moduleName{
+    font-family: 'Bungee', sans-serif;
+    font-size: 2rem;
+}
+
+.moduleText{
+    color : $even_ligher_font;
+    width : 100%;
+    padding: 0%;
+}
+
+.mySkills{
+    justify-content: left;
+    padding: 0%;
+    margin-left: 1rem;
+    margin-top : 5%;
+    align-self: center;
+    
+}
+
+.skillDiv{
+    display: inline-block;
+    color: $even_ligher_font;
+    font-family: 'Baloo 2',sans-serif;
+    //@extend: $background_black;
+    font-size: 1.2rem;
+    border:.2rem solid $hovered;
+    border-radius: .5rem;
+    border-left: none;
+    border-right: none;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-right: 0rem;
+    padding-left: .3rem;
+    padding-right: .3rem;
+    
+}
+
+
+

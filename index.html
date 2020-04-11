@@ -1,15 +1,38 @@
 ---
-#front mbatter
+#front matter
 title : Kyperbelt
 layout : default
 ---
 
-<div class="container border">
-    <div class="row border headerRow ">
-        <div class="col-4 border align-self-center"><h1 class="nameHeader">Jonathan Camarena</h1></div>
-        <div class="col"></div>
+<div class="container w-100 ">
+    <div class="row justify-content-center ">
+        <div class="col col-md-6 introHeader text-center ">
+            My name is {{site.data.constants.firstname | capitalize }}
+             {{site.data.constants.lastname | capitalize }}.
+        </div>
     </div>
-    <div class="row border">
+   
+   {%for module in site.data.constants.modules%}
+    <div class="row my-5 justify-content-center">
+        <div class="col col-md-9 showRow border-bottom border-secondary rounded-lg pt-3 pb-0 pb-3 px-1 px-md-5"> 
 
+            <div class="row justify-content-center {% cycle "justify":'justify-content-md-start' ,'justify-content-md-end' %} mx-0 w-100 h-100 ">
+                <div class="col-5 col-md-4 align-self-center {%cycle "order1": "order-first order-md-first", "order-first order-md-last" %}">
+                    <img class="w-100 " src="/assets/image/gameicons/{{module.icon}}" alt="">
+                </div>
+                <div class="col-12 col-md-8 p-0 m-0">
+                    <div class="row w-100 h-100 mx-0 px-0">
+                        <div class="col-12 text-center moduleName">
+                            {{module.name}}
+                        </div>
+                        <div class="col-12 moduleText text-center h-100  p-0">
+                            {%include {{module.text}} %}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    {%endfor%}
 </div>

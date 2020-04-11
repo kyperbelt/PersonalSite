@@ -1,67 +1,38 @@
+{%capture my_nav%}
+
+    <a class="navbar-brand " href={{ site.data.constants.home }}>
+        <img width="30" height="30" class="logo d-inline-block align-center" alt="">
+
+    </a>
+    {% for my_item in site.data.navigation %}
+        {% if my_item.hamburger == false %}
+            <a name="page-link" class="ml-auto d-lg-none nav-sm-item nav-link {% if page.url == my_item.link %}current{%endif%}"  href={{ my_item.link }}>
+                {{my_item.name}}
+            </a>
+        {%endif%}
+    {% endfor %}
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse  navbar-right" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-lg-auto">
+            {% assign navitems = site.data.navigation %}
+            {% for my_item in navitems  %}
+                <a name="page-link" class="{%if my_item.hamburger == false %}d-none d-lg-inline{%endif%} nav-sm-item nav-link {% if page.url == my_item.link %}current{%endif%} {%if my_item.enabled == false%}disabled{%endif%}" href={{ my_item.link }}>
+                    {{my_item.name}}
+                </a>
+            {% endfor %}
+
+        </div>
+    </div>
+{%endcapture%}
+
 <nav class="d-flex d-md-none navigation navbar navbar-expand-lg navbar-dark sticky-top">
-
-    <a class="navbar-brand " href={{ site.data.constants.home }}>
-        <img width="30" height="30" class="logo d-inline-block align-center" alt="">
-
-    </a>
-    {% for item in site.data.navigation %}
-        {% if item.hamburger == false %}
-            <a name="page-link" {% if page.url == item.link %}class="ml-auto d-lg-none nav-sm-item nav-link current" {% else %}
-                class="ml-auto d-lg-none nav-item nav-link" {% endif %} href={{ item.link }}>
-                {{item.name}}
-            </a>
-        {%endif%}
-    {% endfor %}
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse  navbar-right" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-lg-auto">
-            {% assign navitems = site.data.navigation %}
-            {% for item in navitems  %}
-                <a name="page-link" {% if page.url == item.link %}class="{%if item.hamburger == false %}d-none d-lg-inline{%endif%} nav-sm-item nav-link current" {% else %}
-                    class="{%if item.hamburger == false %}d-none d-lg-inline{%endif%} nav-item nav-link" {% endif %} href={{ item.link }}>
-                    {{item.name}}
-                </a>
-            {% endfor %}
-
-        </div>
-    </div>
+    {{my_nav}}
 </nav>
-
-<nav class="d-none d-md-flex navigation navbar navbar-expand-lg navbar-dark">
-
-    <a class="navbar-brand " href={{ site.data.constants.home }}>
-        <img width="30" height="30" class="logo d-inline-block align-center" alt="">
-
-    </a>
-    {% for item in site.data.navigation %}
-        {% if item.hamburger == false %}
-            <a name="page-link" {% if page.url == item.link %}class="ml-auto d-lg-none nav-sm-item nav-link current" {% else %}
-                class="ml-auto d-lg-none nav-item nav-link" {% endif %} href={{ item.link }}>
-                {{item.name}}
-            </a>
-        {%endif%}
-    {% endfor %}
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse  navbar-right" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-lg-auto">
-            {% assign navitems = site.data.navigation %}
-            {% for item in navitems  %}
-                <a name="page-link" {% if page.url == item.link %}class="{%if item.hamburger == false %}d-none d-lg-inline{%endif%} nav-sm-item nav-link current" {% else %}
-                    class="{%if item.hamburger == false %}d-none d-lg-inline{%endif%} nav-item nav-link" {% endif %} href={{ item.link }}>
-                    {{item.name}}
-                </a>
-            {% endfor %}
-
-        </div>
-    </div>
+<nav class="d-none d-md-flex navigation navbar navbar-expand-lg navbar-dark ">
+    {{my_nav}}
 </nav>

@@ -1,19 +1,25 @@
 
-<div id="carouselExampleControls" class="carousel slide ml-auto" data-ride="carousel">
+<div id="projectSlides" class="carousel slide ml-auto h-auto" data-ride="carousel">
+    <ol class="carousel-indicators my-0 ">
+        {%for img in page.images%}
+            
+            <li data-target="#projectSlides" data-slide-to="{{forloop.index0}}" {%if forloop.index0 == 0%}class="active"{%endif%}></li>
+        {%endfor%}
+      </ol>
     <div class="carousel-inner">
         {%for img in page.images%}
-        <div class="carousel-item {%if forloop.index0 == 0%}active{%endif%}">
-            <img class="d-block w-100 mh-80 m-auto" src="/assets/image/projects/{{img}}" alt="First slide">
-        </div>
+            <div class="carousel-item {%if forloop.index0 == 0%}active{%endif%}">
+                <img class="d-block w-100 mh-80 m-auto" src="/assets/image/projects/{{img}}" alt="First slide">
+            </div>
         {%endfor%}
 
 
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <a class="carousel-control-prev pl-0" href="#projectSlides" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#projectSlides" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>

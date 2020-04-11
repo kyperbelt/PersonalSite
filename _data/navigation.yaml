@@ -1,12 +1,15 @@
 - name : Home
   link : /
   hamburger : true
+  enabled : true
 - name : Projects
   link : /projects/
-  hamburger : false
+  hamburger : true
+  enabled : true
 - name : About
   link : /about/
   hamburger : true
-- name : Contact
-  link : /contact/
-  hamburger : true
+  enabled : false
+# - name : Contact
+#   link : /contact/
+#   hamburger : true

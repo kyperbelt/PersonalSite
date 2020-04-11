@@ -1,0 +1,30 @@
+<div class="footer">
+    <div class="container w-75 h-100 mx-auto">
+        <div class="row justify-content-center h-75 pt-2 pb-2">
+            <!-- <div class="col-12 footerName border">
+                {%assign constants = site.data.constants%}
+                {{constants.firstname | capitalize }} {{constants.lastname | capitalize }}
+            </div> -->
+            {%for i in site.data.externals%}
+                <div class="col-6 col-md text-start pl-10 align-self-center text-md-center text-start">
+                    <a class="footerLink"  target="_blank" href="{{i.link}}"><img class="footerLinkImage" src="/assets/image/{{i.icon}}_icon.png" alt="{{i.icon}}">{{i.name}}</a>
+                </div>
+            {%endfor%}
+        </div>
+        <div class="row justify-content-center footerCopyright" style="height:2rem;">
+            <div class="mr-0 col-12 col-md-7 text-center text-md-right align-self-center">
+                <script>
+                    document.write('&copy;' );
+                    document.write(' Jonathan Genaro Camarena - Kyperbelt');
+                </script>
+            </div>
+            <div class="ml-0 col-12 col-md-5 text-center text-md-left align-self-center">
+                <script>
+                document.write('2020 - ');
+                document.write(new Date().getFullYear());
+            </script>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -3,14 +3,19 @@ layout : default
 ---
 
 <div class="container">
+    <div class="row justify-content-end">
+        <div class="h7 col-12 col-md-12 d-inline text-right text-md-left">
+            <a class="" href="/projects/#{{page.category}}"> Back to Projects</a>
+        </div>
+    </div>
     <div class="row">
-        <div class="col">
-            <a class="my-5 btn-sm bg-primary text-light" href="/projects/"> Back to Projects</a>
+        <div class="col d-none">
+            <a class="my-5 btn-sm bg-primary text-light" href="/projects/"> Back</a>
         </div>
     </div>
     <div class="row justify-content-around justify-content-md-between">
         <div class="col-12 col-md-5">
-            <div class="projectName">{{page.name}}</div>
+            <div class="projectName">{{page.title}}</div>
         </div>
 
         <div class="col d-none d-md-inline"></div>
@@ -23,6 +28,9 @@ layout : default
     <div class="row justify-content-around pt-3">
         <div class="col-12 col-md-6 order-1 pt-2 pt-md-0">
             {{ content }}
+            <div class="">
+                <a class="btn bg-primary rounded-pill text-light" href="/projects/#{{page.category}}"> Back to Projects</a>
+            </div>
         </div>
         <div class="col-12 col-md-6 order-first order-md-2">
             {%include carousel.html %}
@@ -39,9 +47,9 @@ layout : default
         </div>
 
     </div>
-    <div class="row">
-        <div class="col">
-            <a class="btn bg-primary text-light" href="/projects/"> Back to Projects</a>
+    <div class="row justify-content-start">
+        <div class="col d-inline d-md-none">
+            <a class="" href="/projects/#{{page.category}}"> Back to Projects</a>
         </div>
     </div>
 

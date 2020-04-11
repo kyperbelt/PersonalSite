@@ -1,1 +1,23 @@
 home : /
+firstname : jonathan
+middlename : genaro
+lastname : camarena
+company : Kyperbelt Media
+email : jonathancamarenadev@gmail.com
+skills:
+    - Java
+    - C#
+    - Python
+    - Front-End
+    - Godot
+    - Mobile
+modules:
+    - name: Games
+      icon : gamepad.png
+      text: gamestext.html
+    - name: Tools
+      icon: wrench.png
+      text: toolstext.html
+    - name : Skills
+      icon : trophy.png
+      text : skillstext.html

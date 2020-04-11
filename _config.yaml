@@ -2,6 +2,8 @@ collections:
   projects:
     output : true
 
+exclude: ["docs"]
+
 defaults:
   - scope:
       path: ""
@@ -18,7 +20,8 @@ defaults:
     values:
         layout : project
         thumb : untitled.png
-        name : untitled
+        title : untitled
+        category : other
         images : []
         download: []
         information : []

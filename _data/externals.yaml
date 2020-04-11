@@ -1,3 +1,12 @@
-twitter: https://twitter.com/_kyperbelt_
-github : https://github.com/kyperbelt
-linkedin : https://www.linkedin.com/in/jonathancamarena/
+- name: Twitter
+  link: https://twitter.com/_kyperbelt_
+  icon: twitter
+- name: Github
+  link: https://github.com/kyperbelt
+  icon: github
+- name: LinkedIn
+  link: https://www.linkedin.com/in/jonathancamarena/
+  icon: linkedin
+- name: Email
+  link: mailto:jonathancamarenadev@gmail.com
+  icon: email
