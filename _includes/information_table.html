@@ -12,10 +12,13 @@
       <td colspan="4">
         {% if info[1].first %}
           {%for i in info[1]%}
+            {%if forloop.index0 > 0%}
+              ✦
+            {%endif%}
             <a href="{{i.link}}" target="_blank">{{i.text}}</a>
           {%endfor%}
         {% else %}
-          {{info[1]}}
+          {{info[1] | replace: '|', '✦'}}
         {% endif %}
       </td>
     </tr>

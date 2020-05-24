@@ -1,3 +1,28 @@
 <div class="">
     I love making games
 </div>
+<div class="container-fluid">
+    <div class="row">
+        {%assign games = site.projects | where: 'category' , 'games' | sort: 'rank' | reverse %}
+        {%for i in (0..2) %}
+            <div class="col-12 col-md-4 p-1">
+                <a href="{{games[i].url}}">
+                    <div class="card bg-dark border border-secondary w-100 h-100 mt-2"><img src="/assets/image/projects/{{games[i].thumb}}" class="card-img-top" alt="..." style="height:75%;">
+                        <div class="card-body p-2">
+                            <div class="h5 text-light card-title text-center">
+                                {{games[i].title}}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+              
+            </div>
+        {%endfor%}
+    </div>
+    <div class="d-block mt-5 w-100 m-0 p-0">
+        <a href="{{site.url}}/projects/#games" class="btn bg-secondary w-75 text-center text-light rounded-pill">
+            See More Games
+        </a>
+    </div>
+  
+</div>

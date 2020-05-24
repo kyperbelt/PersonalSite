@@ -14,8 +14,11 @@ permalink : /projects/
             {%endunless%}
         {% endfor %}
         {%for category in categories%}
-            <div class="col-12 mt-0 mt-sm-3 mt-md-5 text-left categoryName">
-                <a name="{{category}}">{{category | capitalize }}</a>
+            <div class="col-12 mb-5 mb-sm-1 mb-md-3 categoryBorder border">
+                <a name="{{category}}" class="w-75 ml-auto"></a>
+            </div>
+            <div class="col-12 mt-0 mt-sm-3 mt-md-4 text-left categoryName">
+                {{category | capitalize }}
             </div>
             {%assign projects = site.projects | where : "category",category %}
             {% for project in projects%}

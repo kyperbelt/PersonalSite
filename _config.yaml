@@ -21,6 +21,7 @@ defaults:
         layout : project
         thumb : untitled.png
         title : untitled
+        rank : 0
         category : other
         images : []
         download: []

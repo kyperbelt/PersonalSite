@@ -15,7 +15,7 @@ body { margin: 0; overflow-x: hidden; background-color: #3A4750; color: #DDDDDD;
 
 .current { background-color: #303841; }
 
-.logo { content: url("/assets/image/logo2.png"); display: inline-block; height: 90%; }
+.logo { height: 90%; }
 
 a[name="pagelink"] { display: table-cell; vertical-align: middle; color: #999999; margin-top: 0; font-family: 'Open Sans', sans-serif; margin-bottom: 0; height: 30px; width: 80px; text-decoration: none; text-align: center; background-color: #303841; }
 
