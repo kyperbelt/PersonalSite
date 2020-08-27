@@ -1,8 +1,12 @@
+
+
 collections:
   projects:
     output : true
 
-exclude: ["docs"]
+destination: "docs"
+
+exclude: ["ProjectFirstDrafts.docx"]
 
 defaults:
   - scope:

@@ -60,5 +60,3 @@ a[name="pagelink"] { display: table-cell; vertical-align: middle; color: #999999
 .mySkills { justify-content: left; padding: 0%; margin-left: 1rem; margin-top: 5%; align-self: center; }
 
 .skillDiv { display: inline-block; color: #DDDDDD; font-family: 'Baloo 2',sans-serif; font-size: 1.2rem; border: 0.2rem solid #AF4441; border-radius: .5rem; border-left: none; border-right: none; margin-left: 1rem; margin-top: 1rem; margin-right: 0rem; padding-left: .3rem; padding-right: .3rem; }
-
-/*# sourceMappingURL=styles.css.map */
